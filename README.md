@@ -103,6 +103,15 @@ Test backend manually:
 
 ```bash
 source venv/bin/activate
+sudo dnf install -y nodejs npm  #for pm2 installation
+sudo npm install -g pm2
+pm2 --version
+pm2 start app.py --name python-app --interpreter python3
+pm2 status
+pm2 logs python-app
+pm2 save
+pm2 startup
+   or
 python3 app.py
 ```
 
